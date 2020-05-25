@@ -68,6 +68,8 @@ test_set = test_datagen.flow(X_test, Y_test, batch_size=64)
 model.fit(train_set, steps_per_epoch=60000//64, epochs=5, 
                     validation_data=test_set, validation_steps=10000//64)
 
+model.save("mnist.h5")
+
 scores = model.evaluate(X_test, Y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
