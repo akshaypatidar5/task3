@@ -72,5 +72,5 @@ scores = model.evaluate(X_test, Y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
 
-
+model.save("mnist.h5")
 
